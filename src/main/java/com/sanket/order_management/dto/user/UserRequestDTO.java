@@ -8,4 +8,6 @@ public class UserRequestDTO {
     private String lastName;
     private String email;
     private String password;
+    private String phoneNumber;
+    private String address;
 }

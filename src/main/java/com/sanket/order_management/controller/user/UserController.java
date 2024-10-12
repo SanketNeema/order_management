@@ -17,12 +17,16 @@ public class UserController {
 
     @PostMapping("/register")
     public ResponseEntity<UserResponseDTO> registerUser(@RequestBody UserRequestDTO userRequestDTO) {
+    	
+    	//TODO: add validations
         UserResponseDTO userResponseDTO = userService.addUser(userRequestDTO);
         return ResponseEntity.ok(userResponseDTO);
     }
 
     @PostMapping("/login")
     public ResponseEntity<String> loginUser(@RequestBody UserLoginDTO userLoginDTO) {
+    	
+    	//TODO: add validations
         boolean isLoginSuccessful = userService.login(userLoginDTO);
         if (isLoginSuccessful) {
             return ResponseEntity.ok("Login successful");

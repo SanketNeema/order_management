@@ -25,6 +25,8 @@ public class UserService {
         user.setFirstName(userRequestDTO.getFirstName());
         user.setLastName(userRequestDTO.getLastName());
         user.setEmail(userRequestDTO.getEmail());
+        user.setAddress(userRequestDTO.getAddress());
+        user.setPhoneNumber(userRequestDTO.getPhoneNumber());
         user.setPassword(passwordEncoder.encode(userRequestDTO.getPassword())); // Encrypt password
 
         User savedUser = userRepository.save(user);
